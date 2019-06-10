@@ -1,0 +1,104 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'tarafdar' on host 'batcomputer.arkham' (Linux_x86_64 version 4.15.0-47-generic) on Wed Apr 24 16:37:44 EDT 2019
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/tarafdar/workDir/test/galapagos/telepathy/hlsSources'
+INFO: [HLS 200-10] Opening project '/home/tarafdar/workDir/test/galapagos/hlsBuild/pynq-z2/ip/dariusController_raw'.
+INFO: [HLS 200-10] Adding design file '/home/tarafdar/workDir/test/galapagos/telepathy/hlsSources/dariusController_raw.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/tarafdar/workDir/test/galapagos/hlsBuild/pynq-z2/ip/dariusController_raw/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [HLS 200-10] Analyzing design file '/home/tarafdar/workDir/test/galapagos/telepathy/hlsSources/dariusController_raw.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 365.875 ; gain = 0.180 ; free physical = 9167 ; free virtual = 58638
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 365.875 ; gain = 0.180 ; free physical = 9167 ; free virtual = 58638
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 366.023 ; gain = 0.328 ; free physical = 9161 ; free virtual = 58632
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-24] /home/tarafdar/workDir/test/galapagos/telepathy/hlsSources/dariusController_raw.cpp:85: Index for bit vector operation is out of bound.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 366.023 ; gain = 0.328 ; free physical = 9156 ; free virtual = 58627
+INFO: [XFORM 203-102] Automatically partitioning small array 'parameter_mem_info' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'data_mem_info' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'parameter_mem_info' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'data_mem_info' in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 493.695 ; gain = 128.000 ; free physical = 9131 ; free virtual = 58602
+INFO: [XFORM 203-811] Inferring multiple bus burst write of a total cumulative length 15 on port 'darius_driver' (/home/tarafdar/workDir/test/galapagos/telepathy/hlsSources/dariusController_raw.cpp:199:17). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 493.695 ; gain = 128.000 ; free physical = 9131 ; free virtual = 58601
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dariusController_raw' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dariusController_raw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.06 seconds; current allocated memory: 83.685 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 84.622 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dariusController_raw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/stream_in_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/stream_in_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/stream_in_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/stream_in_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/stream_out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/stream_out_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/stream_out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/stream_out_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/axis_cmd_mm2s_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/axis_cmd_s2mm_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/axis_mm2s_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/axis_mm2s_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/axis_s2mm_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/axis_s2mm_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/darius_driver' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dariusController_raw/rank' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dariusController_raw' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'state_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'input_dma_size' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'output_dma_size' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'parameter_mem_info_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'parameter_mem_info_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'parameter_dma_size' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_mem_info_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'input_dma_address' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_mem_info_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_mem_info_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'output_dma_address' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'data_mem_info_3' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'dariusController_raw_darius_info' to 'dariusController_bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'next_rank' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cumulative_cycle_cou' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'rank' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dariusController_raw'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 87.670 MB.
+INFO: [RTMG 210-278] Implementing memory 'dariusController_bkb_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 493.695 ; gain = 128.000 ; free physical = 9116 ; free virtual = 58588
+INFO: [SYSC 207-301] Generating SystemC RTL for dariusController_raw.
+INFO: [VHDL 208-304] Generating VHDL RTL for dariusController_raw.
+INFO: [VLOG 209-307] Generating Verilog RTL for dariusController_raw.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 24 16:38:08 2019...
+INFO: [HLS 200-112] Total elapsed time: 24.27 seconds; peak allocated memory: 87.670 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Wed Apr 24 16:38:08 2019...
